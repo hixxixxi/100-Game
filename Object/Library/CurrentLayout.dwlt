@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 498}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 448}
-  m_MaxSize: {x: 22012, y: 10024}
+  m_MinSize: {x: 913, y: 448}
+  m_MaxSize: {x: 22008, y: 10024}
   vertical: 0
-  controlID: 119
+  controlID: 51
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 120
+  controlID: 15
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 380
     width: 910
     height: 567
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 251
     height: 947
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -534,7 +534,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 94f0ffff
+      m_ExpandedIDs: d6fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -596,34 +596,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Sprites
   m_LastFoldersGridSize: 64
-  m_LastProjectPath: D:\Chamod\Documents\University\CMPT 395\Project\Object
+  m_LastProjectPath: D:\Chamod\Documents\Github\f19lovelace\Object
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8300000
-    m_LastClickedID: 12488
-    m_ExpandedIDs: 000000006a2e0000b830000000ca9a3b
+    m_SelectedIDs: 3c0a0000
+    m_LastClickedID: 2620
+    m_ExpandedIDs: 00000000740900003c0a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scripts
-      m_OriginalName: Scripts
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12488
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -637,7 +637,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9e260000
     m_LastClickedID: 9886
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000740900003c0a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +665,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: d4390000c6efffff5c1e0000681e00005a4b0000385effff561e0000ae34feff3041000014a8fdfff843000062070000780700006a1c0000700500006e1c0000ba6100004207000040170000fe1e0000903c00005898ffffe03b000002340000ea4a000014c1ffffee2a0000f83b00002847000064370000463900006c3a0000fe440000a48a0000763c00009e0b00004e350000e6280000da280000d0280000c25e00005a5f0000b22f00007c5f0000a4480000662400006a290000d8240000de27000018250000e07d00007a83000018c0000012c000009c260000cc350000422b0000ee370000d46fffff568300003e2c0000c82d0000d801ffffee24000054250000f6270000202f0000922900007e40fdff5e3700008e86ffff20270000d83100005c2f000052300000f4270000f024ffffe43c000090260000563300009a2700009044000066310000a0260000c64f0000c6260000de3700002e320000d0360000c63500002656000082b5feff224500002a2e00007a32000026b80000ee3b000032380000f42c0000505700002e420000b4280000522c0000b22700006c0b00007c0b0000e40e00000a1000000000000006360000962b000050770000
+    m_ExpandedInstanceIDs: d4390000c6efffff5c1e0000681e00005a4b0000385effff561e0000ae34feff3041000014a8fdfff843000062070000780700006a1c0000700500006e1c0000ba6100004207000040170000fe1e0000903c00005898ffffe03b000002340000ea4a000014c1ffffee2a0000f83b00002847000064370000463900006c3a0000fe440000a48a0000763c00009e0b00004e350000e6280000da280000d0280000c25e00005a5f0000b22f00007c5f0000a4480000662400006a290000d8240000de27000018250000e07d00007a83000018c0000012c000009c260000cc350000422b0000ee370000d46fffff568300003e2c0000c82d0000d801ffffee24000054250000f6270000202f0000922900007e40fdff5e3700008e86ffff20270000d83100005c2f000052300000f4270000f024ffffe43c000090260000563300009a2700009044000066310000a0260000c64f0000c6260000de3700002e320000d0360000c63500002656000082b5feff224500002a2e00007a32000026b80000ee3b000032380000f42c0000505700002e420000b4280000522c0000b22700006c0b00007c0b0000e40e00000a1000000000000006360000962b0000507700005a0b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
