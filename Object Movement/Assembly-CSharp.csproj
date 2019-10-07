@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bounce.cs" />
+    <Compile Include="Assets\Scripts\Expand.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Chamod/Documents/Github/f19lovelace/Object Movement/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
