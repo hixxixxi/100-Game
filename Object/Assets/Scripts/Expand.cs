@@ -41,11 +41,6 @@ public class Expand : MonoBehaviour
         {
             //  set pressed to true
             isPressed = true;
-
-            Vector3 mousePos;
-            // converts mouse position into in-gamme coordinates
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         }
     }
 
