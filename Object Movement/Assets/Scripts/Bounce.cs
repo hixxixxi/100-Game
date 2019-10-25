@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Bounces the ball around the screen
+/// Sets the ball velocity
 /// </summary>
 /// 
 /// Field           Description
 /// ball            The ball object to move
+/// ballSpeed       Speed of the ball movement
+/// expanding       Is the ball expanding
 /// 
 /// Author: Chamod Welhenge
 /// 
 public class Bounce : MonoBehaviour
 {
     private Rigidbody2D ball;
-    public float ballSpeed = 4f;
+    private float ballSpeed = 4f;
     internal bool expanding = false;
 
     /// <summary>
-    /// Start is called before the first frame update
+    /// Dry yjr ball velocity, so it bouncces
     /// </summary>
     void Start()
     {

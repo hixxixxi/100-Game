@@ -16,7 +16,6 @@ public class TouchInput : MonoBehaviour
     {
         // loop through all touches
         for (int i = 0; i < Input.touchCount; i++)
-
         {
             // get touch from touch array
             Touch t = Input.touches[i];
@@ -39,28 +38,30 @@ public class TouchInput : MonoBehaviour
                         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
                         expanding.expanding = true;
                         break;
+
                     case TouchPhase.Moved:
                         print("Touch Moved");
                         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
                         expanding.expanding = true;
                         break;
+
                     case TouchPhase.Stationary:
                         print("Touch Stationary");
                         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
                         expanding.expanding = true;
                         break;
+
                     case TouchPhase.Ended:
                         print("Touch Ended");
                         expanding.expanding = false;
                         break;
+
                     case TouchPhase.Canceled:
                         print("Too many touches.");
                         expanding.expanding = false;
                         break;
                 }
             }
-            
-            
         }
     }
 
