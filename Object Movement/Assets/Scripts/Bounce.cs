@@ -15,6 +15,7 @@ public class Bounce : MonoBehaviour
 {
     private Rigidbody2D ball;
     public float ballSpeed = 4f;
+    internal bool expanding = false;
 
     /// <summary>
     /// Start is called before the first frame update

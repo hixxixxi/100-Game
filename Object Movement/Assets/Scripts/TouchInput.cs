@@ -30,26 +30,32 @@ public class TouchInput : MonoBehaviour
 
             if (hit.collider.tag == "Circle")
             {
+                Bounce expanding = hit.collider.gameObject.GetComponent<Bounce>();
                 print("Touch Detect");
                 switch (t.phase)
                 {
                     case TouchPhase.Began:
                         print("Touch Began");
                         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+                        expanding.expanding = true;
                         break;
                     case TouchPhase.Moved:
                         print("Touch Moved");
                         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+                        expanding.expanding = true;
                         break;
                     case TouchPhase.Stationary:
                         print("Touch Stationary");
                         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+                        expanding.expanding = true;
                         break;
                     case TouchPhase.Ended:
                         print("Touch Ended");
+                        expanding.expanding = false;
                         break;
                     case TouchPhase.Canceled:
                         print("Too many touches.");
+                        expanding.expanding = false;
                         break;
                 }
             }
