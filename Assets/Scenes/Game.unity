@@ -533,6 +533,7 @@ MonoBehaviour:
   limit: 10
   upForce: 1
   sideForce: 0.1
+  circlesList: []
 --- !u!1 &535476845
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,8 @@ public class TargetGenerator : MonoBehaviour
             GameObject tmp;
             // Instantiate at position (0, 0, 0) and zero rotation.
             tmp = Instantiate(myPrefab, new Vector2(0, 0), Quaternion.identity);
+            TextMesh text = tmp.GetComponentInChildren<TextMesh>();
+            text.text = ""+ 0;
             circlesList.Add(tmp);
 
             // Random force vector

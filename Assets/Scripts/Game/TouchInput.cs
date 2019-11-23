@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,39 +31,49 @@ public class TouchInput : MonoBehaviour
             if (hit.collider.tag == "Circle")
             {
                 Bounce expanding = hit.collider.gameObject.GetComponent<Bounce>();
-                print("Touch Detect");
+                
                 switch (t.phase)
                 {
                     case TouchPhase.Began:
-                        print("Touch Began");
-                        hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
-                        expanding.expanding = true;
+                        expand(hit, expanding);
                         break;
 
                     case TouchPhase.Moved:
-                        print("Touch Moved");
-                        hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
-                        expanding.expanding = true;
+                        expand(hit, expanding);
                         break;
 
                     case TouchPhase.Stationary:
-                        print("Touch Stationary");
-                        hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
-                        expanding.expanding = true;
+                        expand(hit, expanding);
                         break;
 
                     case TouchPhase.Ended:
-                        print("Touch Ended");
                         expanding.expanding = false;
                         break;
 
                     case TouchPhase.Canceled:
-                        print("Too many touches.");
                         expanding.expanding = false;
                         break;
                 }
             }
         }
+    }
+    
+    /// <summary>
+    /// Expands the object and increments the size
+    /// </summary>
+    /// <param name="hit">Object to be expanded</param>
+    /// <param name="expanding">Is the object expanding</param>
+    private void expand(RaycastHit2D hit, Bounce expanding) {
+        expanding.expanding = true;
+        hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+        // get the current value from text
+        string currentVal = hit.transform.gameObject.GetComponentInChildren<TextMesh>().text;
+        // convert it
+        int tmp = Int32.Parse(currentVal);
+        tmp++;
+        // set the text to the new value
+        hit.transform.gameObject.GetComponentInChildren<TextMesh>().text = "" + tmp;
+
     }
 
 }
