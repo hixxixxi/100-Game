@@ -14,7 +14,15 @@ public class TouchInput : MonoBehaviour
     /// Detects touches on Circles and expands them
     /// </summary>
     void Update()
+ Sean
+    {    ///checks if game is paused, if so then pause everything.
+        if (PauseMenu.GameIsPaused) {
+            return;
+
+        }
+
     {
+ master
         // loop through all touches
         for (int i = 0; i < Input.touchCount; i++)
         {
@@ -64,12 +72,24 @@ public class TouchInput : MonoBehaviour
     /// <param name="hit">Object to be expanded</param>
     /// <param name="expanding">Is the object expanding</param>
     private void expand(RaycastHit2D hit, Bounce expanding) {
+ Sean
+
         expanding.expanding = true;
         hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+ master
         // get the current value from text
         string currentVal = hit.transform.gameObject.GetComponentInChildren<TextMesh>().text;
         // convert it
         int tmp = Int32.Parse(currentVal);
+ Sean
+        if (tmp >= 100) {
+            return;
+
+        }
+        expanding.expanding = true;
+        hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+
+ master
         tmp++;
         // set the text to the new value
         hit.transform.gameObject.GetComponentInChildren<TextMesh>().text = "" + tmp;
