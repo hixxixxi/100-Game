@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Detects touches on Circles and expands them
@@ -9,6 +10,7 @@ using UnityEngine;
 public class TouchInput : MonoBehaviour
 {
     public float scaleFactor = 0.01f;
+
 
     /// <summary>
     /// Detects touches on Circles and expands them
@@ -80,7 +82,8 @@ public class TouchInput : MonoBehaviour
         tmp++;
         // set the text to the new value
         hit.transform.gameObject.GetComponentInChildren<TextMesh>().text = "" + tmp;
-
+        //Here we update the score
+        ScoreScript.scoreValue++;
     }
 
 }
