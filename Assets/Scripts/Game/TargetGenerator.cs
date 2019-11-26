@@ -43,7 +43,7 @@ public class TargetGenerator : MonoBehaviour
             circlesList.Add(tmp);
 
             // Random force vector
-            float Xforce = Random.Range(-sideForce, sideForce * 1000);
+            float Xforce = Random.Range(-sideForce, sideForce);
             float yForce = Random.Range(upForce / 2f, upForce * 3);
             float zForce = Random.Range(-sideForce, sideForce * 3);
 
