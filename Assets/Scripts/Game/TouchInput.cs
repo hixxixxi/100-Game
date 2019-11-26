@@ -82,7 +82,7 @@ public class TouchInput : MonoBehaviour
             return;
         }
         expanding.expanding = true;
-        hit.transform.localScale += new Vector3(scaleFactor, scaleFactor, scaleFactor);
+        hit.transform.localScale += new Vector3(scaleFactor/4, scaleFactor/4, scaleFactor/4);
         tmp++;
         // set the text to the new value
         hit.transform.gameObject.GetComponentInChildren<TextMesh>().text = "" + tmp;

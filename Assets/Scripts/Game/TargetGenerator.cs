@@ -43,7 +43,7 @@ public class TargetGenerator : MonoBehaviour
             circlesList.Add(tmp);
 
             // Random force vector
-            float Xforce = Random.Range(-sideForce, sideForce * 1000);
+            float Xforce = Random.Range(-sideForce, sideForce);
             float yForce = Random.Range(upForce / 2f, upForce * 3);
             float zForce = Random.Range(-sideForce, sideForce * 3);
 
@@ -56,6 +56,7 @@ public class TargetGenerator : MonoBehaviour
 
     public static void IncreaseDifficulty()
     {
+        LevelScript.levelValue++;
         for (int i = 0; i < limit; i++)  {Destroy(circlesList[i]);}
         circlesList.Clear();
         limit++;
