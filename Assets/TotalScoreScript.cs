@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreScript : MonoBehaviour
+public class TotalScoreScript : MonoBehaviour
 {
-    public static int scoreValue = 0;
-    public Text score;
+    public static int totalScoreValue = 0;
+    public Text totalScore;
     // Start is called before the first frame update
     void Start()
     {
-        score = GetComponent<Text>();
-        
+        totalScore = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "" + scoreValue;
+        totalScore.text = "Total Score: " + totalScoreValue;
     }
 }

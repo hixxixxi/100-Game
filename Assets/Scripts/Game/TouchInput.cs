@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 /// <summary>
 /// Detects touches on Circles and expands them
 /// </summary>
@@ -16,11 +17,14 @@ public class TouchInput : MonoBehaviour
     /// Detects touches on Circles and expands them
     /// </summary>
     void Update()
-    {    ///checks if game is paused, if so then pause everything.
+    {
+      ///checks if game is paused, if so then pause everything.
         if (PauseMenu.GameIsPaused) {
             return;
 
         }
+        //We check if win condition has been made
+        checkWinCondition();
         // loop through all touches
         for (int i = 0; i < Input.touchCount; i++)
         {
@@ -82,8 +86,25 @@ public class TouchInput : MonoBehaviour
         tmp++;
         // set the text to the new value
         hit.transform.gameObject.GetComponentInChildren<TextMesh>().text = "" + tmp;
-        //Here we update the score
+        //Here we update the score and total score;
         ScoreScript.scoreValue++;
+        TotalScoreScript.totalScoreValue++;
     }
+    /// <summary>
+    /// -Sean, checks the win condtion by multiplying 100 by the targetgenerator limit.
+    /// </summary>
+    public void checkWinCondition() {
+        if (ScoreScript.scoreValue == 100 * TargetGenerator.limit) {
+            ///The below lines are some debug lines/thoughts
+            /////This debug line is just for testing.
+            Debug.Log("YAY YOU WON");
+            ///Here you could stop the game, then present the won the level menu,
+            ///Once the user presses the next level button, you would remove all the circles from the circle list (make a static void method in targetgenerator to remove all the lists)
+            ///Then you would update the level count UI (has not been created yet)., just ++ the level count by 1
+            /// Then you despawn the won the level menu, spawn in the circles, keep in mind that since it is a new level we either increase the amount of balls/increase the speed factor.
+            ScoreScript.scoreValue = 0;
+            LevelScript.levelValue++;
 
+        }
+    }
 }
