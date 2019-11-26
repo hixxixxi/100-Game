@@ -94,7 +94,7 @@ public class TouchInput : MonoBehaviour
     /// -Sean, checks the win condtion by multiplying 100 by the targetgenerator limit.
     /// </summary>
     public void checkWinCondition() {
-        if (ScoreScript.scoreValue == 100 * TargetGenerator.limit) {
+        if (ScoreScript.scoreValue == 100) {
             ///The below lines are some debug lines/thoughts
             /////This debug line is just for testing.
             Debug.Log("YAY YOU WON");
