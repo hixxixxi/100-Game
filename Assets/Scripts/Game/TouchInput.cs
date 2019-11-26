@@ -98,12 +98,13 @@ public class TouchInput : MonoBehaviour
             ///The below lines are some debug lines/thoughts
             /////This debug line is just for testing.
             Debug.Log("YAY YOU WON");
+            GameManager.instance.NextLevel();
             ///Here you could stop the game, then present the won the level menu,
             ///Once the user presses the next level button, you would remove all the circles from the circle list (make a static void method in targetgenerator to remove all the lists)
             ///Then you would update the level count UI (has not been created yet)., just ++ the level count by 1
             /// Then you despawn the won the level menu, spawn in the circles, keep in mind that since it is a new level we either increase the amount of balls/increase the speed factor.
-            ScoreScript.scoreValue = 0;
-            LevelScript.levelValue++;
+            //ScoreScript.scoreValue = 0;
+            //LevelScript.levelValue++;
 
         }
     }
