@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour {
         //Reset all things from last game, really buggy code
         TotalScoreScript.totalScoreValue = 0;
         ScoreScript.scoreValue = 0;
-        LevelScript.levelValue = 0;
+        LevelScript.levelValue = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
