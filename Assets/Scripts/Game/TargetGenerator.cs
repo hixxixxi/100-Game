@@ -23,8 +23,8 @@ public class TargetGenerator : MonoBehaviour
     public GameObject myPrefab;
     ///Sean- Changed this to static, if there are conflicts/problems look here-Sean
     public static int limit = 1;
-    public float upForce = 1f;
-    public float sideForce = .1f;
+    public float upForce = 10f;
+    public float sideForce = 10f;
     public static List<GameObject> circlesList = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,8 @@ public class TargetGenerator : MonoBehaviour
         {
             GameObject tmp = new GameObject();
             // Instantiate at position (0, 0, 0) and zero rotation.
-            tmp = Instantiate(myPrefab, new Vector2(0, 0), Quaternion.identity);
+            int random = Random.Range(1, 10);
+            tmp = Instantiate(myPrefab, new Vector2(random,random), Quaternion.identity);
             TextMesh text = tmp.GetComponentInChildren<TextMesh>();
             text.text = "" + 0;
             circlesList.Add(tmp);
@@ -71,7 +72,8 @@ public class TargetGenerator : MonoBehaviour
         {
             GameObject tmp;
             // Instantiate at position (0, 0, 0) and zero rotation.
-            tmp = Instantiate(myPrefab, new Vector2(0, 0), Quaternion.identity);
+            int random = Random.Range(1, 10);
+            tmp = Instantiate(myPrefab, new Vector2(random,random), Quaternion.identity);
             TextMesh text = tmp.GetComponentInChildren<TextMesh>();
             text.text = "" + 0;
             circlesList.Add(tmp);
