@@ -21,13 +21,22 @@ public class TargetGenerator : MonoBehaviour
 {
     // Reference to the Prefab.
     public GameObject myPrefab;
+    public static Sprite bgIn;
+    public GameObject bgOut;
     ///Sean- Changed this to static, if there are conflicts/problems look here-Sean
     public static int limit = 1;
     public static List<GameObject> circlesList = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
+        if (bgIn != null)
 
+        {
+            bgOut.GetComponent<SpriteRenderer>().sprite = bgIn;
+
+        }
+
+        
         SpawnBalls();
     }
 
