@@ -45,22 +45,41 @@ public class TouchInput : MonoBehaviour
                 switch (t.phase)
                 {
                     case TouchPhase.Began:
+                        if (ScoreScript.scoreValue == 100) {
+                            break;
+                        }
                         expand(hit, expanding);
                         break;
 
                     case TouchPhase.Moved:
+                        if (ScoreScript.scoreValue == 100)
+                        {
+                            break;
+                        }
                         expand(hit, expanding);
                         break;
 
                     case TouchPhase.Stationary:
+                        if (ScoreScript.scoreValue == 100)
+                        {
+                            break;
+                        }
                         expand(hit, expanding);
                         break;
 
                     case TouchPhase.Ended:
+                        if (ScoreScript.scoreValue == 100)
+                        {
+                            break;
+                        }
                         expanding.expanding = false;
                         break;
 
                     case TouchPhase.Canceled:
+                        if (ScoreScript.scoreValue == 100)
+                        {
+                            break;
+                        }
                         expanding.expanding = false;
                         break;
                 }
