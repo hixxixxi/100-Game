@@ -58,7 +58,7 @@ public class TargetGenerator : MonoBehaviour
     public static void IncreaseDifficulty()
     {
         LevelScript.levelValue++;
-        for (int i = 0; i < limit; i++)  {Destroy(circlesList[i]);}
+        for (int i = 0; i < circlesList.Count; i++)  {Destroy(circlesList[i]);}
         circlesList.Clear();
         limit++;
     }
