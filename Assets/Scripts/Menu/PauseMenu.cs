@@ -29,10 +29,5 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void DeathPause() {
-        Time.timeScale = 0f;
-
-    }
-
     
 }

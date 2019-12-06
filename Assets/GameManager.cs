@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public GameObject NextLevelUI;
-    public GameObject DeathUI;
     void Awake()
     {
         if (instance == null)
@@ -20,11 +19,5 @@ public class GameManager : MonoBehaviour
         NextLevelUI.SetActive(true);
         Time.timeScale = 0f;
 
-    }
-    public void DeathMenu() {
-        DeathUI.SetActive(true);
-        PauseMenu.GameIsPaused = true;
-        Time.timeScale = 0f;
-        
     }
 }

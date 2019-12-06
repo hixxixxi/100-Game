@@ -10,11 +10,7 @@ PrefabInstance:
     - target: {fileID: 7695678723800045828, guid: 2fcc5e57ec09e394f861cc553016d9a3,
         type: 3}
       propertyPath: m_Name
- Sean
-      value: Christmas
-
       value: Christmas Variant
- master
       objectReference: {fileID: 0}
     - target: {fileID: 9056907321041301765, guid: 2fcc5e57ec09e394f861cc553016d9a3,
         type: 3}
@@ -127,10 +123,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: a03bbd119ab8d314bbb765afdce61507,
         type: 3}
- Sean
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2fcc5e57ec09e394f861cc553016d9a3, type: 3}
-
     - target: {fileID: 82362049013902586, guid: 2fcc5e57ec09e394f861cc553016d9a3,
         type: 3}
       propertyPath: m_Volume
@@ -149,4 +141,3 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 3718886604820638827}
   m_PrefabAsset: {fileID: 0}
- master

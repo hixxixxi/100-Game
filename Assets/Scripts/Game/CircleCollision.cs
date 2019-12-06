@@ -29,8 +29,8 @@ public class CircleCollision : MonoBehaviour
             Bounce other = collision.collider.GetComponent<Bounce>();
             // Check if one is expanding
             if (current.expanding || other.expanding)
-            {
-                GameManager.instance.DeathMenu();
+            {    
+                SceneManager.LoadScene("EndScene");
             }
         }
     }
