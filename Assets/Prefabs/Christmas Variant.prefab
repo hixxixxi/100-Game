@@ -123,21 +123,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: a03bbd119ab8d314bbb765afdce61507,
         type: 3}
-    - target: {fileID: 82362049013902586, guid: 2fcc5e57ec09e394f861cc553016d9a3,
+    - target: {fileID: 5069243182670325252, guid: 2fcc5e57ec09e394f861cc553016d9a3,
         type: 3}
-      propertyPath: m_Volume
-      value: 0.5
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7043114697790101296, guid: 2fcc5e57ec09e394f861cc553016d9a3,
-        type: 3}
-      propertyPath: bounce
-      value: 
-      objectReference: {fileID: 3654873893119230097}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fcc5e57ec09e394f861cc553016d9a3, type: 3}
---- !u!82 &3654873893119230097 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 82362049013902586, guid: 2fcc5e57ec09e394f861cc553016d9a3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3718886604820638827}
-  m_PrefabAsset: {fileID: 0}
