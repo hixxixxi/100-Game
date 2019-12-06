@@ -20,71 +20,62 @@ using UnityEngine;
 public class TargetGenerator : MonoBehaviour
 {
     // Reference to the Prefab.
-    public GameObject myPrefab;
+    public static GameObject myPrefab;
+    public static Sprite bgIn;
+    public GameObject bgOut;
+    public GameObject circleIn;
     ///Sean- Changed this to static, if there are conflicts/problems look here-Sean
     public static int limit = 1;
-    public float upForce = 1f;
-    public float sideForce = .1f;
     public static List<GameObject> circlesList = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
+        if (bgIn != null)
 
-        //Score gets reset to 0 whenever the user starts the level.
-        //If there is a bug when going to another level, check here to see if setting the scoreValue is conflciting.
-        ScoreScript.scoreValue = 0;
-        for (int i = 0; i < limit; i++)
         {
-            GameObject tmp = new GameObject();
-            // Instantiate at position (0, 0, 0) and zero rotation.
-            tmp = Instantiate(myPrefab, new Vector2(0, 0), Quaternion.identity);
-            TextMesh text = tmp.GetComponentInChildren<TextMesh>();
-            text.text = "" + 0;
-            circlesList.Add(tmp);
+            bgOut.GetComponent<SpriteRenderer>().sprite = bgIn;
 
-            // Random force vector
-            float Xforce = Random.Range(-sideForce, sideForce);
-            float yForce = Random.Range(upForce / 2f, upForce * 3);
-            float zForce = Random.Range(-sideForce, sideForce * 3);
-
-            Vector3 Force = new Vector3(Xforce, yForce, zForce);
-
-            // Set rigidBody velocity to new random Force;
-            tmp.GetComponent<Rigidbody2D>().velocity = Force;
         }
+
+        if (myPrefab == null)
+
+        {
+            myPrefab = circleIn;
+
+        }
+
+
+        SpawnBalls();
     }
 
     public static void IncreaseDifficulty()
     {
         LevelScript.levelValue++;
-        for (int i = 0; i < limit; i++)  {Destroy(circlesList[i]);}
+        for (int i = 0; i < circlesList.Count; i++)  {Destroy(circlesList[i]);}
         circlesList.Clear();
         limit++;
     }
 
     public void SpawnBalls()
-    {
-                //Score gets reset to 0 whenever the user starts the level.
+    { //Score gets reset to 0 whenever the user starts the level.
         //If there is a bug when going to another level, check here to see if setting the scoreValue is conflciting.
         ScoreScript.scoreValue = 0;
         for (int i = 0; i < limit; i++)
         {
             GameObject tmp;
-            // Instantiate at position (0, 0, 0) and zero rotation.
-            tmp = Instantiate(myPrefab, new Vector2(0, 0), Quaternion.identity);
+
+            // https://www.youtube.com/watch?v=t2Cs71rDlUg for the method
+            float spawnPosX = Random.Range(-8.5f, 9.5f);
+            float spawnPosY = Random.Range(-4.5f, 5.5f);
+            Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY);
+
+
+            tmp = Instantiate(myPrefab, spawnPos, Quaternion.identity) as GameObject;
+
+
             TextMesh text = tmp.GetComponentInChildren<TextMesh>();
             text.text = "" + 0;
             circlesList.Add(tmp);
-
-            // Random force vector
-            float Xforce = Random.Range(-sideForce, sideForce * 1000);
-            float yForce = Random.Range(upForce / 2f, upForce * 3);
-            float zForce = Random.Range(-sideForce, sideForce * 3);
-
-            Vector3 Force = new Vector3(Xforce, yForce, zForce);
-
-            // Set rigidBody velocity to new random Force;
-            tmp.GetComponent<Rigidbody2D>().velocity = Force;
         }
     }
 }
