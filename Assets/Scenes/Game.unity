@@ -3424,9 +3424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015357e3d21307444bc51fff87badcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 3095068974170463229, guid: e4c0e69ff183c21469e6dfafd39aeab3,
-    type: 3}
   bgOut: {fileID: 469105740}
+  circleIn: {fileID: 7695678723800045828, guid: 2fcc5e57ec09e394f861cc553016d9a3,
+    type: 3}
 --- !u!4 &2056118270
 Transform:
   m_ObjectHideFlags: 0

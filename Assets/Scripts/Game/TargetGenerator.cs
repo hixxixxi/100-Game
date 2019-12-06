@@ -20,9 +20,10 @@ using UnityEngine;
 public class TargetGenerator : MonoBehaviour
 {
     // Reference to the Prefab.
-    public GameObject myPrefab;
+    public static GameObject myPrefab;
     public static Sprite bgIn;
     public GameObject bgOut;
+    public GameObject circleIn;
     ///Sean- Changed this to static, if there are conflicts/problems look here-Sean
     public static int limit = 1;
     public static List<GameObject> circlesList = new List<GameObject>();
@@ -36,7 +37,14 @@ public class TargetGenerator : MonoBehaviour
 
         }
 
-        
+        if (myPrefab == null)
+
+        {
+            myPrefab = circleIn;
+
+        }
+
+
         SpawnBalls();
     }
 

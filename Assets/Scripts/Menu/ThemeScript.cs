@@ -5,9 +5,14 @@ using UnityEngine.UI;
 
 public class ThemeScript : MonoBehaviour
 {
-    public Sprite[] bg;
-    public int currentIndex = 0;
-    public Image image;
+
+    public Sprite[] circles;
+    public GameObject[] sprites;
+    public Sprite[] bg; // image array to show
+    public int currentIndex = 0; // current image being shown
+    public Image image; // image being displayed
+    public Image circle;
+
 
     public void next() {
 
@@ -17,8 +22,7 @@ public class ThemeScript : MonoBehaviour
             currentIndex = 0;
         }
         image.sprite = bg[currentIndex];
-        TargetGenerator.bgIn = image.sprite;
-
+        circle.sprite = circles[currentIndex];
     }
 
 
@@ -31,7 +35,16 @@ public class ThemeScript : MonoBehaviour
 
         }
         image.sprite = bg[currentIndex];
+        circle.sprite = circles[currentIndex];
+    }
+
+
+    public void apply() {
+        image.sprite = bg[currentIndex];
+        circle.sprite = circles[currentIndex];
         TargetGenerator.bgIn = image.sprite;
+        TargetGenerator.myPrefab = sprites[currentIndex];
+
     }
 
 }
