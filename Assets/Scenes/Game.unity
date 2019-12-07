@@ -4076,6 +4076,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighScoreManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1707679913592776160, guid: 62b1b90f71a63824a9f607c776ef54d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1707679913592776167, guid: 62b1b90f71a63824a9f607c776ef54d3,
         type: 3}
       propertyPath: scoreParent
@@ -4245,7 +4250,7 @@ PrefabInstance:
     - target: {fileID: 8096277654280668707, guid: 19d92b778eeba6e479772034e00422fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8096277654280668704, guid: 19d92b778eeba6e479772034e00422fa,
         type: 3}

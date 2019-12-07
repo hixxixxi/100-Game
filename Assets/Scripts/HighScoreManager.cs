@@ -19,7 +19,7 @@ public class HighScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        connectionString = "URI=file:" + Application.dataPath + "/HighScoreDB.db";
+        connectionString = "URI=file:" + Application.dataPath + "/StreamingAssets"+ "/HighScoreDB.db";
         //InsertScore("Chamod", 6000);
         ShowScores();
     }

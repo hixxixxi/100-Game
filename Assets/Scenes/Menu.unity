@@ -3408,7 +3408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HUNDREDS
+  m_text: Circles.io
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3477,10 +3477,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -207.34521, w: 0}
   m_textInfo:
     textComponent: {fileID: 1292674750}
-    characterCount: 8
+    characterCount: 10
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -4809,6 +4809,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighScoreManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1707679913592776167, guid: 62b1b90f71a63824a9f607c776ef54d3,
+        type: 3}
+      propertyPath: scoreParent
+      value: 
+      objectReference: {fileID: 2129159554}
     - target: {fileID: 1707679913592776166, guid: 62b1b90f71a63824a9f607c776ef54d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4864,11 +4869,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1707679913592776167, guid: 62b1b90f71a63824a9f607c776ef54d3,
-        type: 3}
-      propertyPath: scoreParent
-      value: 
-      objectReference: {fileID: 2129159554}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62b1b90f71a63824a9f607c776ef54d3, type: 3}
 --- !u!1001 &8096277654246627782
